@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ecommerce Product</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="top-bar">
+            <img src="images/logo.svg" class="logo">
+            <div class="menu">
+                <a href="" class="colelections">Collections</a>
+                <a href="" class="colelections">Men</a>
+                <a href="" class="colelections">Women</a>
+                <a href="" class="colelections">About</a>
+                <a href="" class="colelections">Contact</a>
+            </div>
+            <div class="top-right-bar">
+                <img src="images/icon-cart.svg" class="top-cart">
+                <img src="images/image-avatar.png" class="profile" onclick="showCart();">
+            </div>
+        </div>
+        <hr class="top-hr">
+        <div class="main">
+            <div class="images">
+                <img src="images/image-product-1.jpg" class="big-image">
+                <div class="small-images">
+                    <img src="images/image-product-1-thumbnail.jpg" onclick="replaceBigImage();" class="small-image">
+                    <img src="images/image-product-2-thumbnail.jpg" onclick="replaceBigImage();" class="small-image">
+                    <img src="images/image-product-3-thumbnail.jpg" onclick="replaceBigImage();" class="small-image">
+                    <img src="images/image-product-4-thumbnail.jpg" onclick="replaceBigImage();" class="small-image final-image">
+                </div>
+            </div>
+            <div class="product-details">
+                <p class="product-company">SNEAKER COMPANY</p>
+                <h1 class="product-title">Fall Limited Edition Sneakers</h1>
+                <p class="product-info">
+                    These low-profile sneakers are your perferct
+                    casual wear companion. Featuring a dourable
+                    rubber outer sole, they'll withstand everything
+                    the weather can offer.
+                </p>
+                <div class="product-price">
+                    <div class="prices">
+                        <h1 class="second-price">$125.00</h1>
+                        <p class="first-price"><del>$250.00</del></p>
+                    </div>
+                    <p class="price-precent-tag">50%</p>
+                </div>
+                <div class="poduct-order">
+                    <div class="lower" onclick="countMinus();">
+                        <img src="images/icon-minus.svg">
+                    </div>
+                    <p class="count">0</p>
+                    <div class="higher" onclick="countPlus();">
+                        <img src="images/icon-plus.svg">
+                    </div>
+                    <button class="add-to-cart"><img src="images/icon-cart.svg" class="bottom-cart">Add to cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <p class="cart-title">Cart</p>
+            <hr class="cart-hr">
+            <div class="cart-item">
+                <img src="images/image-product-1-thumbnail.jpg" class="item-image">
+                <div class="item-text">
+                    <p class="item-text">Fall Limited Edition Sneakers</p>
+                    <div class="item-price-calc">
+                        <p class="item-price">$125.00 x</p>
+                        <p class="item-count">0</p>
+                        <p class="item-total">$0.00</p>
+                    </div>
+                </div>
+                <img src="images/icon-delete.svg" class="delete" onclick="removeItem();">
+            </div>
+            <button class="checkout" onclick="updateCart();">Checkout</button>
+        </div>
+        <div class="empty-cart">
+            <p class="cart-title">Cart</p>
+            <hr class="cart-hr">
+            <p class="cart-text">Your cart is empty.</p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
